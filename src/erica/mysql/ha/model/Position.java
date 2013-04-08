@@ -1,6 +1,6 @@
 package erica.mysql.ha.model;
 
-public interface Position {
+public abstract class Position {
  
 	private String file;
 	 

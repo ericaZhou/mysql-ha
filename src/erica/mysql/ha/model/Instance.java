@@ -1,16 +1,34 @@
 package erica.mysql.ha.model;
-
-public interface Instance {
+/**
+ * 
+ * @author Erica
+ * @version 1.0
+ */
+public  class Instance {
  
-	private final String version;
+	private String version;
 	 
 	private String IP;
 	 
 	private Instance master;
 	 
-	public static abstract boolean isAlive(Instance mysql);
-	public abstract void getBinlog();
-	public abstract void setIP(String IP);
-	public abstract int setMaster(Instance master);
+	/**
+	 * 判断一个mysql实例是否有效
+	 * @param mysql 需要进行判断的实例
+	 * @return
+	 */
+	public static boolean isAlive(Instance mysql){
+		return false;
+	}
+	public  void getBinlog(){
+		
+	}
+	public  void setIP(String IP){
+		
+	}
+	public int switchToMaster(MasterInfo master){
+		return 0;
+	}
+	
 }
  
